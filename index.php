@@ -1,4 +1,3 @@
 <?
-  echo "Hello world";
-  echo '222';
+  echo "Hello world 11";
 ?>
