@@ -1,3 +1,3 @@
 <?
-  echo "zdes pro sport pitanie";
+  echo "zdes pro sport pitanie !";
 ?>
