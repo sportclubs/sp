@@ -27,6 +27,9 @@
   $result = mysqli_query($mysqli,$request) or die(mysqli_error());
   $row = mysqli_fetch_array($result);
   $max = $row['max'];
+  for ($i=1;$i<=10;$i++){
+	  echo 'fdgdfg';
+  }
 	   
   $res = mysqli_query($mysqli,"INSERT INTO `sc_contact` (`site_form`, `fam`,`email`, `sectionid`) 
   VALUES ('$rnd_uniq', '$fio','$email', '$maxd')");
