@@ -19,4 +19,16 @@
     $perDate = " vtiger_crmentity.createdtime = '$dateFrom'";
   } 
   
+    $res = mysqli_query($mysqli,"INSERT INTO `sc_trainer` (`city_id`, `first_name`,`about_trainer`,`site_form`,`mobile_telephone`,`email`,`actual_date`,`actual_time`) 
+											     VALUES ('4', '$name','$about_trener', '$rnd_uniq', '$tel', '$email', '$dt','$tm');");
+	   
+
+  $request = "SELECT max(`trainer_id`) as `max` FROM `sc_trainer` ";
+  $result = mysqli_query($mysqli,$request) or die(mysqli_error());
+  $row = mysqli_fetch_array($result);
+  $max = $row['max'];
+	   
+  $res = mysqli_query($mysqli,"INSERT INTO `sc_contact` (`site_form`, `fam`,`email`, `sectionid`) 
+  VALUES ('$rnd_uniq', '$fio','$email', '$maxd')");
+  
 ?>
