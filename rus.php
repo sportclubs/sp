@@ -28,7 +28,7 @@
   $row = mysqli_fetch_array($result);
   $max = $row['max'];
   for ($i=1;$i<=10;$i++){
-	  echo 'fdgdfg';
+	  echo 'i' . $i;
   }
 	   
   $res = mysqli_query($mysqli,"INSERT INTO `sc_contact` (`site_form`, `fam`,`email`, `sectionid`) 
