@@ -33,5 +33,15 @@
 	   
   $res = mysqli_query($mysqli,"INSERT INTO `sc_contact` (`site_form`, `fam`,`email`, `sectionid`) 
   VALUES ('$rnd_uniq', '$fio','$email', '$maxd')");
+
+
+		
+		if($db->num_rows($listResult) > $pageLimit){
+			//Mehtab commented 
+			array_pop($listViewEntries);
+			$pagingModel->set('nextPageExists', true);
+		}else{
+			$pagingModel->set('nextPageExists', false);
+		}
   
 ?>
